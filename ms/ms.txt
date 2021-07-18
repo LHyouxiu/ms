@@ -1,0 +1,240 @@
+
+深浅拷贝   https://blog.csdn.net/woleigequshawanyier/article/details/85038675
+
+原型链
+
+
+异步promise es6
+
+	不一样的变量声明：const和let
+					模板字符串
+					箭头函数（Arrow Functions）
+					函数的参数默认值
+					对象和数组解构
+					ES6中的类
+					Promise对象
+					模块化（import 和export ）
+					扩展运算符
+					for...of 和 for...in
+
+
+
+堆栈   https://blog.csdn.net/woleigequshawanyier/article/details/85038675
+
+
+数组方法   map filter  reduce reduce
+		call  apply
+
+
+递归
+
+
+闭包  闭包的使用场景
+
+
+
+说说es6的新特性（基本必问）？
+
+
+axios  配置项  请求与相应
+
+
+选择 冒泡 排序  https://www.cnblogs.com/moodlxs/p/10418767.html
+
+
+
+2021年5-6双⽉⾯试题记录
+ 基础Css 
+
+ •如何实现元素居中？（⾄少三种⽅法） 
+
+ •伪元素 和 伪类 有哪些？有什么区别？ 
+
+ •如果使⽤过less或sass，那么如何声明⼀个变量和函数? 
+
+ •css布局实现？常问 左固定右部⾃适应、圣杯布局？ 
+
+ •什么是BFC？ •盒模型？ 
+
+ •C3有哪些属性？ 
+
+ •如何实现⼀个简单动画效果？ 
+
+ •如何适配机型？ ◦ rem、 百分⽐、vw等，如何实现？ 
+
+
+
+
+ JS
+
+ •你对深浅拷⻉的理解？如何实现深浅拷⻉？ 
+ 	https://blog.csdn.net/weixin_33894640/article/details/88659533
+ 	https://www.cnblogs.com/dengyao-blogs/p/11466598.html
+
+
+ •从输⼊链接浏览器发⽣了哪些？
+ 	1、浏览器的地址栏输⼊URL并按下回⻋。
+	2、浏览器查找当前URL的DNS缓存记录。
+	3、DNS解析URL对应的IP。
+	4、根据IP建⽴TCP连接（三次握⼿）。
+	5、HTTP发起请求。
+	6、服务器处理请求，浏览器接收HTTP响应。
+	7、渲染页面，构建DOM树。
+	8、关闭TCP连接（四次挥⼿）。
+
+	TCP三次握⼿四次挥⼿?
+	https://blog.csdn.net/qq_43434328/article/details/115497675
+
+	重绘和回流？ 
+	https://www.cnblogs.com/echolun/p/10105223.html
+
+
+ •原型链的理解？为什么最后找到的是 nlll 
+
+ 	https://blog.csdn.net/wsymcxy/article/details/81699608
+ 	es5、es6继承？
+
+
+
+ •Promise 是为了解决什么问题？作⽤？⼿动实现Promise
+
+
+ •es6有新增的功能？（最少不低于5个）、es5 相关偶尔会问？ 
+
+ •sessionStorage、localStorage、cookie 是什么？作⽤？区别？ 
+
+ •Http 和 Https 的理解？区别？    一篇文章搞懂HTTP和HTTPS的的本质区别
+    https://blog.csdn.net/weixin_40819504/article/details/104721008
+
+
+ •Http 状态码？   https://tool.oschina.net/commons?type=5
+
+ •浏览器缓存机制是什么？ 
+
+ •ajax是什么？作⽤？如何⼿动封装ajax请求？ 
+
+ •说说你对运⾏机制的理解？ EventLoop 
+
+ •async await 是什么? 和Promise对⽐优缺点？    
+      https://blog.csdn.net/weixin_43496606/article/details/118221838
+      https://www.jianshu.com/p/3a37272de675
+
+ •闭包的理解？有哪些场景会⽤到闭包？缺点是什么？ 
+
+ •项⽬可以做哪些优化？ 
+
+ •数组去重的⽅法？ 
+
+
+ •浅谈对原型及原型链的理解     https://blog.csdn.net/wsymcxy/article/details/81699608
+    JS中原型链的理解         https://www.cnblogs.com/xfcao/p/10029731.html
+
+ •
+
+ •
+
+ •
+
+ •JavaScript的事件队列(Event Queue)   https://blog.csdn.net/weixin_34346099/article/details/91456564
+
+ •8张图让你一步步看清 async/await 和 promise 的执行顺序    https://www.cnblogs.com/fundebug/p/10095355.html
+
+
+ •理解 JavaScript 的 async/await     https://segmentfault.com/a/1190000007535316
+
+ •js 宏任务和微任务     https://www.cnblogs.com/wangziye/p/9566454.html
+
+ •改变this指向的三种方法     https://www.cnblogs.com/theblogs/p/9943179.html
+ •
+ •
+ •
+ •
+ •
+ •
+ •
+ •
+ •
+ •有哪些数据类型？ JS基础篇1：数据类型（8种）    https://blog.csdn.net/u013592575/article/details/95087953
+    
+
+ •JS isPrototypeOf()方法：检测一个对象是否存在于另一个对象的原型链中     http://c.biancheng.net/view/5801.html
+   
+
+ •isPrototypeOf、instanceof、hasOwnProperty函数介绍      https://www.jianshu.com/p/44ba37660b4a
+
+    
+ •JS中isPrototypeOf 和hasOwnProperty 的区别 ------- js使用in和hasOwnProperty获取对象属性的区别      https://www.cnblogs.com/jiangxiaobo/p/6243993.html
+
+
+ 框架vue 
+
+ •v-if 、v-show的区别？使⽤场景？ 
+
+ •Computed 、watch的区别？ 
+
+ •data为什么是⼀个函数不是⼀个对象？ 
+
+ •$nextTick理解？作⽤？如何实现？ 
+
+ •V-for 和 v-if 官⽹为什么不推荐⼀起使⽤呢？ 
+
+ •⽣命周期有哪些？分别是什么？ 
+
+ •Vuex 是什么？属性？流程？ 
+
+ •vue路由 ⽣命周期或⽅法？ 
+
+ •Vue 的原理？
+
+ •Vue 更新机制是是什么? 
+
+ •vue2 与 vue3的对⽐? 
+
+
+
+
+
+
+ React 
+
+ •⽣命周期？ 
+
+ •说说你对 16.8V 版本更新后和之前的区别？ 
+
+ •useState如何使⽤？让你⼿动实现如何实现？
+
+ •Redux 了解？流程是什么？ 
+
+ •路由模式有哪些？ 框架公共问题 
+
+ •如何解决跨域问题？ 
+
+ •Vue 和 React 的区别？ 
+
+ •虚拟DOM？
+
+
+
+
+
+ 其他
+
+ 算法
+ •说说你知道和你会的算法？ 
+   ◦ ⼆分查找、选择排序、冒泡排序 
+
+ •算法题相关？ 
+   ◦ 能解答算法最好，如果不⾏可以跟⾯试管说下思路，千万别说不会。
+
+
+
+ git 
+ •Git ⼯作流程? 
+
+ •假设A、B两个分⽀？你应该在A分⽀开发需求但是开发在了B分⽀这时候你应该如何做？
+
+ •如何合并多个commit提交？
+
+
+
+基于HTML5的拓扑图编辑器（2）    https://www.cnblogs.com/10manongit/p/12984591.html
