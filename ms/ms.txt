@@ -44,6 +44,8 @@ axios  配置项  请求与相应
 
 
 2021年5-6双⽉⾯试题记录
+
+
  基础Css 
 
  •如何实现元素居中？（⾄少三种⽅法） 
@@ -62,6 +64,56 @@ axios  配置项  请求与相应
 
  •如何适配机型？ ◦ rem、 百分⽐、vw等，如何实现？ 
 
+ •css权重计算规则
+    内联样式，如: style="..."，权值为1000。         https://segmentfault.com/a/1190000012941923
+    ID选择器，如：#content，权值为0100。
+    类，伪类、属性选择器，如.content，权值为0010。
+    类型选择器、伪元素选择器，如div p，权值为0001。
+    通配符、子选择器、相邻选择器等。如* > +，权值为0000。
+    继承的样式没有权值
+
+    css属性!important         https://www.cnblogs.com/cnblogs-jcy/p/8574177.html
+
+　　》内联样式 
+
+　　》ID选择器(#id)
+
+　　》类选择器(.class) = 伪类选择器(:hover等) = 属性选择器[type等] 
+
+　　》元素选择器(p等) = 伪元素选择器(:after/:before/::selection等) 
+
+　　》通用选择器(*) 
+
+　　》继承的样式
+
+    伪类：
+
+    :active，将样式添加到被激活的元素。
+
+    :focus，将样式添加到被选中的元素。
+
+    :hover，当鼠标悬浮在元素上方是，向元素添加样式。
+
+    :link，将特殊的样式添加到未被访问过的链接。
+
+    :visited，将特殊的样式添加到被访问的链接。
+
+    :first-child，将特殊的样式添加到元素的第一个子元素。
+
+    :lang，允许创作者来定义指定的元素中使用的语言。
+    伪元素：
+
+    :first-letter，将特殊的样式添加到文本的首字母。
+
+    :first-line，将特殊的样式添加到文本的首行。
+
+    :before，在某元素之前插入某些内容。
+
+    :after，在某元素之后插入某些内容
+
+ •*zoom:1的常见作用？    https://www.cnblogs.com/zhuochong/p/11712176.html
+    zoom是IE专用属性，设置zoom:1可以在IE6下清除浮动、解决margin导致的重叠等问题。
+    这里还要补充一点，为什么*display:inline;*zoom:1;前面有*，*放在css属性前面，表示这个属性仅仅应用到Internet Explorer 7 以及以下版本。因为Internet Explorer 版本 7 以及以下承认非字母数字（除了下划线）前缀的属性。所以这里，IE7以上的版本作用的是display: inline-block;而在IE7及以下的版本中作用的是*display:inline;*zoom:1
 
 
 
@@ -126,6 +178,55 @@ axios  配置项  请求与相应
  •项⽬可以做哪些优化？ 
 
  •数组去重的四种方法？   https://www.cnblogs.com/rongy/p/6597014.html
+    •1.最基本的去重方法
+        思路：定义一个新数组，并存放原数组的第一个元素，然后将元素组一一和新数组的元素对比，若不同则存放在新数组中。
+        let newArr = [arr[0]]
+        for (let i = 0; i < arr.length; i++) {
+            const element1 = arr[i];
+            let repeat = false
+            for (let j = 0; j < newArr.length; j++) {
+                const element2 = newArr[j];
+                if (element1 == element2) {
+                    repeat = true
+                    break;
+                }
+            }
+            if (!repeat) {
+                newArr.push(arr[i])
+            }
+        }
+    •2.先排序在去重
+            sort()   new Set()
+            let arr1 = arr.sort()
+            console.log(arr1);
+            let newArr = [arr1[0]]
+            for (let i = 0; i < arr1.length; i++) {
+                const element = arr1[i];
+                // console.log(element);
+                if (arr1[i] !== newArr[newArr.length - 1]) {
+                 newArr.push(arr1[i])
+                }
+            }
+        思路：先将原数组排序，在与相邻的进行比较，如果不同则存入新数组
+    •3.利用对象的属性去重（推荐）
+        思路：每次取出原数组的元素，然后再对象中访问这个属性，如果存在就说明重复
+        定义一个空的对象和一个空的数组，循环一个数组将数组的每一项作为对象的属性，如果对象的属性值是null,就将数据添加到空数组中，并且将对象的该属性值设置为true
+
+        let obj = {}
+        let result = []
+        let list = [1, 2, 3, 4, 5, 6, 7, 8, 1, 9, 1]
+        list.forEach(ele => {
+            if (obj[ele] == null) {
+                result.push(ele)
+                obj[ele]=true
+            }
+        })
+        console.log(result)   // [1, 2, 3, 4, 5, 6, 7, 8, 9]     {1: true, 2: true, 3: true, 4: true, 5: true, 6: true, 7: true, 8: true, 9: true}
+    •利用下标查询
+        indexof
+
+    let newArr = [...new Set(arr)]   // ...是扩展new Set    [Set(5)]  0: Set(5)   {1, 2, 3, 4, 5} length: 1  __proto__: Array(0)
+    console.log(newArr);    
 
 
  •浅谈对原型及原型链的理解     https://blog.csdn.net/wsymcxy/article/details/81699608
@@ -173,7 +274,10 @@ axios  配置项  请求与相应
         https://www.cnblogs.com/xiaohuochai/p/6242257.html
         https://www.cnblogs.com/dasusu/p/10114097.html
 
-  •js事件循环机制(Event Loop)
+  •js事件循环机制(Event Loop) https://blog.csdn.net/qq_33207292/article/details/102624553
+    macro-task(宏任务)：包括整体代码 script，setTimeout，setInterval等
+    micro-task(微任务)：Promise的then的回调函数，process.nextTick，async 函数await下面的代码；等
+
 
  •改变this指向的三种方法     https://www.cnblogs.com/theblogs/p/9943179.html
 
@@ -279,7 +383,7 @@ axios  配置项  请求与相应
     toLocaleString: ƒ toLocaleString()
 
     toString: ƒ toString()
-    
+
     valueOf: ƒ valueOf()
    
 
