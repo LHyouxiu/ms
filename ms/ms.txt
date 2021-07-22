@@ -365,7 +365,10 @@ axios  配置项  请求与相应
     3. 登录后，继续访问https://localhost:9102/manager#user，可以正常看到内容
 
     4. 修改url，访问http://localhost:9100/manager#domain，会跳转到登录页面，因为cookie在http协议下不发送给服务器，服务器要求用户重新登录
- •
+
+ •符号类型(symbol)
+    https://blog.csdn.net/weixin_41900457/article/details/108371731
+
  •
  •
  •
