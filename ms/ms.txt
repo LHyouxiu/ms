@@ -190,7 +190,12 @@ axios  配置项  请求与相应
       https://blog.csdn.net/weixin_43496606/article/details/118221838
       https://www.jianshu.com/p/3a37272de675
 
- •闭包的理解？有哪些场景会⽤到闭包？缺点是什么？ 
+ •闭包的理解？有哪些场景会⽤到闭包？缺点是什么？ https://blog.csdn.net/qq_33505829/article/details/86080460
+            https://blog.csdn.net/binlety/article/details/81288231?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-16.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-16.control
+        缺点：
+            如果不是某些特定任务需要使用闭包，在其它函数中创建函数是不明智的，因为闭包在处理速度和内存消耗方面对脚本性能具有负面影响。
+        优点：
+            然而在一个闭包内对变量的修改，不会影响到另外一个闭包中的变量。以这种方式使用闭包，提供了许多与面向对象编程相关的好处 —— 特别是数据隐藏和封装。
 
  •项⽬可以做哪些优化？ 
 
@@ -253,8 +258,8 @@ axios  配置项  请求与相应
 
  •前端面试常问的基础问题大全    https://www.cnblogs.com/langqq/p/10484499.html
 
- •  pow() 方法可返回 x 的 y 次幂的值。     如果结果是虚数或负数，则该方法将返回 NaN。如果由于指数过大而引起浮点溢出，则该方法将返回 Infinity
-    sqrt() 方法可返回一个数的平方根。    参数 x 的平方根。必须是大于等于 0 的数。 如果 x 小于 0，则返回 NaN。
+ •  Math.pow() 方法可返回 x 的 y 次幂的值。     如果结果是虚数或负数，则该方法将返回 NaN。如果由于指数过大而引起浮点溢出，则该方法将返回 Infinity
+    Math.sqrt() 方法可返回一个数的平方根。    参数 x 的平方根。必须是大于等于 0 的数。 如果 x 小于 0，则返回 NaN。
 
  •JavaScript的事件队列(Event Queue)   https://blog.csdn.net/weixin_34346099/article/details/91456564
 
@@ -377,6 +382,14 @@ axios  配置项  请求与相应
 
  •解决跨域的5种方式
      https://zhuanlan.zhihu.com/p/141977678?from_voters_page=true
+     
+    jsonp：只支持 GET，不支持 POST 请求，不安全 XSS
+    cors：需要后台配合进行相关的设置
+    postMessage：配合使用 iframe，需要兼容 IE6、7、8、9
+    document.domain：仅限于同一域名下的子域
+    websocket：需要后台配合修改协议，不兼容，需要使用 http://socket.io
+    proxy：使用代理去避开跨域请求，需要修改 nginx、apache 等的配置
+
 
 
  •
