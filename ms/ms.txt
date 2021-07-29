@@ -179,7 +179,12 @@
 
  •Http 状态码？   https://tool.oschina.net/commons?type=5
 
- •浏览器缓存机制是什么？ 
+ •浏览器缓存机制是什么？    https://www.cnblogs.com/chengxs/p/10396066.html
+    强缓存
+        expires cache-control  同时存在，cache-control优先级高于expires
+
+    协商缓存
+        last-modified/if-modified-since  
 
  •ajax是什么？作⽤？如何⼿动封装ajax请求？ 
 
