@@ -1,10 +1,10 @@
 
-深浅拷贝   https://blog.csdn.net/woleigequshawanyier/article/details/85038675
+•深浅拷贝   https://blog.csdn.net/woleigequshawanyier/article/details/85038675
 
-原型链
+•原型链
 
 
-异步promise es6
+•异步promise es6
 
 	不一样的变量声明：const和let
 					模板字符串
@@ -19,29 +19,30 @@
 
 
 
-堆栈   https://blog.csdn.net/woleigequshawanyier/article/details/85038675
+•堆栈   https://blog.csdn.net/woleigequshawanyier/article/details/85038675
 
 
-数组方法   map filter  reduce reduce
+•数组方法   map filter  reduce reduce
             call  apply
-JavaScript数组方法总结       https://blog.csdn.net/xiaojinguniang/article/details/82842674
+•JavaScript数组方法总结       https://blog.csdn.net/xiaojinguniang/article/details/82842674
 		https://www.cnblogs.com/sqh17/p/8529401.html
     
 
-递归
+•递归
 
 
-闭包  闭包的使用场景
+•闭包  闭包的使用场景
 
 
 
-说说es6的新特性（基本必问）？
+•说说es6的新特性（基本必问）？
 
 
-axios  配置项  请求与相应
+•axios  配置项  请求与相应
+    request response 参数配置
 
 
-选择 冒泡 排序  https://www.cnblogs.com/moodlxs/p/10418767.html
+•选择 冒泡 排序  https://www.cnblogs.com/moodlxs/p/10418767.html
 
 
 
@@ -462,6 +463,31 @@ axios  配置项  请求与相应
 
  •vue2 与 vue3的对⽐? 
 
+ •hash和history模式的区别    https://blog.csdn.net/ygh5123687/article/details/89473578
+        https://zhuanlan.zhihu.com/p/127186558
+        https://blog.csdn.net/sayoko06/article/details/85321802
+
+ •双向数据绑定   
+    var obj = {
+      foo: 'foo'
+    }
+    Object.defineProperty(obj,"foo",{
+        get:function(){
+            console.log('将要读取obj.foo属性');
+        },
+        set:function(newVal){
+            console.log('当前值为', newVal);
+        }
+    })
+    obj.foo; // 将要读取obj.foo属性
+    obj.foo = 'name'; // 当前值为 name
+ •
+ 
+ •
+ •
+ •
+ •
+ •
 
 
 
