@@ -184,7 +184,10 @@
         expires cache-control  同时存在，cache-control优先级高于expires
 
     协商缓存
-        last-modified/if-modified-since  
+        last-modified/if-modified-since  Etag / If-None-Match，其中Etag / If-None-Match的优先级比Last-Modified / If-Modified-Since高。
+
+ •对应博客(包含js引擎的执行过程)     https://heyingye.github.io/
+
 
  •ajax是什么？作⽤？如何⼿动封装ajax请求？ 
 
