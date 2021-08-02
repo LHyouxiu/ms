@@ -165,7 +165,6 @@
  	es5、es6继承？
 
 
-
  •Promise 是为了解决什么问题？作⽤？⼿动实现Promise
 
 
@@ -178,6 +177,12 @@
 
 
  •Http 状态码？   https://tool.oschina.net/commons?type=5
+ 
+ •GET 和 POST 的区别     https://blog.csdn.net/qq_38182125/article/details/89071899
+        https://www.cnblogs.com/logsharing/p/8448446.html
+        https://blog.csdn.net/Alen_xiaoxin/article/details/105160175
+
+ •浏览器对同一域名进行请求的最大并发连接数       https://blog.csdn.net/ctwen/article/details/84772588
 
  •浏览器缓存机制是什么？    https://www.cnblogs.com/chengxs/p/10396066.html
     强缓存
@@ -315,6 +320,20 @@
         如果cookie中设置了HttpOnly属性，那么通过js脚本将无法读取到cookie信息，这样能有效的防止XSS攻击，窃取cookie内容，这样就增加了cookie的安全性，即便是这样，也不要将重要信息存入cookie。XSS全称Cross
         SiteScript，跨站脚本攻击，是Web程序中常见的漏洞，XSS属于被动式且用于客户端的攻击方式，所以容易被忽略其危害性。其原理是攻击者向有XSS漏洞的网站中输入(传入) 
         恶意的HTML代码，当其它用户浏览该网站时，这段HTML代码会自动执行，从而达到攻击的目的。如，盗取用户Cookie、破坏页面结构、重定向到其它网站等。
+
+
+
+ •常见的web攻击方式　      https://www.cnblogs.com/zhoulifeng/p/12073085.html
+            https://www.cnblogs.com/zyh0430/p/11964800.html
+
+ •移动APP安全测试    https://www.cnblogs.com/botoo/p/10477773.html
+                    https://blog.51cto.com/laoyinga/2155341
+
+ •移动端安全测试主要涉及_移动端测试之APP安全测试    https://blog.csdn.net/weixin_36001196/article/details/111945451?utm_term=%E7%A7%BB%E5%8A%A8%E7%AB%AFapp%E5%AE%89%E5%85%A8%E6%80%A7&utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~all~sobaiduweb~default-0-111945451&spm=3001.4430
+
+ •移动应用安全谈：这份完整的App安全体系图谱请马上收藏          https://zhuanlan.zhihu.com/p/95169517
+
+
 
 
  •总结几种常见web攻击手段及其防御方式     https://www.cnblogs.com/-new/p/7135814.html
