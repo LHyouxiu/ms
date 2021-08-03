@@ -15,7 +15,9 @@
 					Promise对象
 					模块化（import 和export ）
 					扩展运算符
+
 					for...of 和 for...in
+    https://www.cnblogs.com/rogerwu/p/10738776.html
 
 
 
@@ -46,7 +48,24 @@
 
 
 
-2021年5-6双⽉⾯试题记录
+移动端
+
+ •移动端 1px 像素问题及解决办法   https://www.jianshu.com/p/31f8907637a6
+
+        https://blog.csdn.net/yexudengzhidao/article/details/98480173
+        https://blog.csdn.net/howgod/article/details/108191361
+
+ •
+ •
+ •
+ •
+ •
+ •
+ •
+ •
+ •
+ •
+
 
 
  基础Css 
@@ -135,7 +154,24 @@
         https://www.cnblogs.com/xiaohuochai/p/6242257.html
         https://www.cnblogs.com/dasusu/p/10114097.html
 
+
+
+
+
  JS
+ 
+
+ •axios拦截器执行顺序的源码解释   https://blog.csdn.net/qq_44625142/article/details/108128589
+   
+   // 后添加的请求拦截器保存在数组的前面
+   this.interceptors.request.forEach(function unshiftRequestInterceptors(interceptor) {
+     chain.unshift(interceptor.fulfilled, interceptor.rejected);
+   });
+   // 后添加的响应拦截器保存在数组的后面
+   this.interceptors.response.forEach(function pushResponseInterceptors(interceptor) {
+     chain.push(interceptor.fulfilled, interceptor.rejected);
+   });
+
 
  •你对深浅拷⻉的理解？如何实现深浅拷⻉？ 
  	https://blog.csdn.net/weixin_33894640/article/details/88659533
