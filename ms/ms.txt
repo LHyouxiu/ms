@@ -190,6 +190,28 @@
 
 
  •ajax是什么？作⽤？如何⼿动封装ajax请求？ 
+    1.创建XMLHTTPRequest对象
+    2.使用open方法设置和服务器的交互信息
+    3.设置发送的数据，开始和服务器端交互
+    4.注册事件
+    5.更新界面
+
+    https://www.cnblogs.com/cythia/p/6978323.html
+    var xhr;
+      if (window.XMLHttpRequest) {
+        xhr = new XMLHttpRequest()
+      }else{
+        xhr = new ActiveXObject()
+      }
+
+      xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
+      xhr.open("post","02.post.php")
+      xhr.send("name=fox&age=14")
+      xhr.onreadystatechange = function (params) {
+        if (xhr.readystate == 4 && xhr.status == 200) {
+          console.log(xhr.responseText);
+        }
+      }
 
  •Ajax请求的步骤     https://blog.csdn.net/ANGWH/article/details/106751587
 
@@ -267,12 +289,23 @@
 
  •前端面试常问的基础问题大全    https://www.cnblogs.com/langqq/p/10484499.html
 
- •  Math.pow() 方法可返回 x 的 y 次幂的值。     如果结果是虚数或负数，则该方法将返回 NaN。如果由于指数过大而引起浮点溢出，则该方法将返回 Infinity
-    Math.sqrt() 方法可返回一个数的平方根。    参数 x 的平方根。必须是大于等于 0 的数。 如果 x 小于 0，则返回 NaN。
+ •  Math.pow(x,y) 方法可返回 x 的 y 次幂的值。     如果结果是虚数或负数，则该方法将返回 NaN。如果由于指数过大而引起浮点溢出，则该方法将返回 Infinity
+    Math.sqrt(x) 方法可返回一个数的平方根。    参数 x 的平方根。必须是大于等于 0 的数。 如果 x 小于 0，则返回 NaN。
 
  •JavaScript的事件队列(Event Queue)   https://blog.csdn.net/weixin_34346099/article/details/91456564
 
  •8张图让你一步步看清 async/await 和 promise 的执行顺序    https://www.cnblogs.com/fundebug/p/10095355.html
+
+    await 等到之后，做了一件什么事情？
+  那么右侧表达式的结果，就是await要等的东西。
+
+  等到之后，对于await来说，分2个情况
+
+  不是promise对象
+  是promise对象
+  如果不是 promise , await会阻塞后面的代码，先执行async外面的同步代码，同步代码执行完，再回到async内部，把这个非promise的东西，作为 await表达式的结果
+
+  如果它等到的是一个 promise 对象，await 也会暂停async后面的代码，先执行async外面的同步代码，等着 Promise 对象 fulfilled，然后把 resolve 的参数作为 await 表达式的运算结果。
 
 
  •理解 JavaScript 的 async/await     https://segmentfault.com/a/1190000007535316
@@ -298,8 +331,9 @@
 
     微任务：10、12 （微任务，process.nextTick():10优先于promise.then() ：12）
 
+  
 
-  •三个代码示例理解js中的this  this指向    https://www.cnblogs.com/yalong/p/14548378.html
+  •  变量提升和函数提升  https://www.cnblogs.com/liuhe688/p/5891273.html
 
 
   •js事件循环机制(Event Loop) https://blog.csdn.net/qq_33207292/article/details/102624553
@@ -307,7 +341,11 @@
     micro-task(微任务)：Promise的then的回调函数，process.nextTick，async 函数await下面的代码；等
 
 
+ •三个代码示例理解js中的this  this指向    https://www.cnblogs.com/yalong/p/14548378.html
+
+
  •改变this指向的三种方法     https://www.cnblogs.com/theblogs/p/9943179.html
+
 
  •Cookie中的httponly的属性和作用     https://blog.csdn.net/qq_38553333/article/details/80055521
         1.什么是HttpOnly?
