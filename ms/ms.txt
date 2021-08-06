@@ -522,9 +522,11 @@
 
  •Vue 的原理？
 
- •Vue 更新机制是是什么? 
+ •Vue 更新机制是是什么?     https://www.jianshu.com/p/4dff7c2cdaaa
 
  •vue2 与 vue3的对⽐? 
+
+ •虚拟DOM？
 
  •hash和history模式的区别    https://blog.csdn.net/ygh5123687/article/details/89473578
         https://zhuanlan.zhihu.com/p/127186558
