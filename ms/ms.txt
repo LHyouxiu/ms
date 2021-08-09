@@ -103,7 +103,7 @@
     内联样式，如: style="..."，权值为1000。         https://segmentfault.com/a/1190000012941923
     ID选择器，如：#content，权值为0100。
     类，伪类、属性选择器，如.content，权值为0010。
-    类型选择器、伪元素选择器，如div p，权值为0001。
+    元素选择器、伪元素选择器，如div p，权值为0001。
     通配符、子选择器、相邻选择器等。如* > +，权值为0000。
     继承的样式没有权值
 
@@ -263,7 +263,7 @@
       https://www.jianshu.com/p/3a37272de675
 
  •闭包的理解？有哪些场景会⽤到闭包？缺点是什么？ https://blog.csdn.net/qq_33505829/article/details/86080460
-            https://blog.csdn.net/binlety/article/details/81288231?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-16.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-16.control
+            https://www.cnblogs.com/huanghuali/p/9851453.html
         缺点：
             如果不是某些特定任务需要使用闭包，在其它函数中创建函数是不明智的，因为闭包在处理速度和内存消耗方面对脚本性能具有负面影响。
         优点：
@@ -290,7 +290,13 @@
             }
         }
     •2.先排序在去重
-            sort()   new Set()
+            let arr = [1,2,3,4,5,6,1,2,3,4,5]
+                console.log(...new Set(arr))
+            //1 2 3 4 5 6
+             
+            new Set()
+
+            sort()  
             let arr1 = arr.sort()
             console.log(arr1);
             let newArr = [arr1[0]]
@@ -348,6 +354,7 @@
 
   如果它等到的是一个 promise 对象，await 也会暂停async后面的代码，先执行async外面的同步代码，等着 Promise 对象 fulfilled，然后把 resolve 的参数作为 await 表达式的运算结果。
 
+ •JS中的柯里化    https://segmentfault.com/a/1190000012769779
 
  •理解 JavaScript 的 async/await     https://segmentfault.com/a/1190000007535316
 
@@ -591,6 +598,38 @@
  •
  •
  •
+
+
+ css三角形
+
+ 闭包手写
+
+ es6新增
+
+ 原型链
+
+ 三个浏览器缓存机制
+
+ vue生命周期
+
+ v-if v-show
+
+ mvvm理解     https://www.cnblogs.com/goloving/p/8520030.html
+
+ 数据响应式实现原理   https://www.cnblogs.com/goloving/p/8520030.html
+
+ 做过哪些性能优化
+
+ 数据的方法
+
+ 数组去重
+
+ 最全vue总结  https://www.cnblogs.com/wenshaochang123/p/14888494.html
+
+        https://blog.csdn.net/qq_43182723/article/details/106297623
+
+        https://blog.csdn.net/hong521520/article/details/106837248
+
 
 
 
